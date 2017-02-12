@@ -2,6 +2,7 @@ dependencies:
   cache_directories:
     - jq-1.5
   pre:
+    - git config --global http.https://gopkg.in.followRedirects true
     - |
       if [[ ! -d jq-1.5/BUILD ]]; then
         curl -L -fsS https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz | tar -xz
